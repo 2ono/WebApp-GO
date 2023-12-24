@@ -4,24 +4,17 @@ import (
 	"log"
 )
 
-type myStruct struct {
-	FirstName string
-}
-
-func (m *myStruct) printFirstName() string {
-	return m.FirstName
-}
-
 func main() {
 
-	var myVar myStruct
-	myVar.FirstName = "John"
+	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
-	myVar2 := myStruct{
-		FirstName: "Likas",
-	}
+	log.Println(numbers)
 
-	log.Println(myVar.printFirstName())
-	log.Println(myVar2.printFirstName())
+	log.Println(numbers[0:9])
+
+	words := []string{"henry", "nike", "max", "john"}
+
+	log.Println(words)
+	log.Println(words[0:2])
 
 }
