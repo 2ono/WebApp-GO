@@ -2,27 +2,26 @@ package main
 
 import (
 	"log"
-	"time"
 )
 
-var s = "seven"
+type myStruct struct {
+	FirstName string
+}
 
-type User struct {
-	FirstName   string
-	LastName    string
-	PhoneNumber string
-	Age         int
-	BirthDate   time.Time
+func (m *myStruct) printFirstName() string {
+	return m.FirstName
 }
 
 func main() {
 
-	user := User{
-		FirstName:   "Henry",
-		LastName:    "Lee",
-		PhoneNumber: "1 555- 555- 1212",
+	var myVar myStruct
+	myVar.FirstName = "John"
+
+	myVar2 := myStruct{
+		FirstName: "Likas",
 	}
 
-	log.Println(user.FirstName, user.LastName, "Birthdate:", user.BirthDate, "PhoneNumber:", user.PhoneNumber)
+	log.Println(myVar.printFirstName())
+	log.Println(myVar2.printFirstName())
 
 }
