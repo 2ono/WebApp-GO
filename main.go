@@ -1,20 +1,23 @@
 package main
 
-import (
-	"log"
-)
+import "log"
 
 func main() {
 
-	numbers := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	myVar := "tiger"
 
-	log.Println(numbers)
+	switch myVar {
+	case "cat":
+		log.Println("cat is set to cat")
+	case "dog":
+		log.Println("cat is set to dog")
+	case "fish":
+		log.Println("cat is set to fish")
+	case "tiger":
+		log.Println("cat is set to tiger")
+	default:
+		log.Println("everything is here")
 
-	log.Println(numbers[0:9])
-
-	words := []string{"henry", "nike", "max", "john"}
-
-	log.Println(words)
-	log.Println(words[0:2])
+	}
 
 }
